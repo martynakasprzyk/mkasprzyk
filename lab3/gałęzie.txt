@@ -1,0 +1,26 @@
+a) Ga³¹Ÿ w Gicie jest po prostu lekkim, przesuwalnym wskaŸnikiem na któryœ z owych zestawów zmian. Domyœlna nazwa ga³êzi Gita to master. Kiedy zatwierdzasz pierwsze zmiany, otrzymujesz ga³¹Ÿ master, która wskazuje na ostatni zatwierdzony przez ciebie zestaw. Z ka¿dym zatwierdzeniem automatycznie przesuwa siê ona do przodu.
+ 
+b) Wed³ug konwencji, lokalny aktualny katalog roboczy w gicie jest nazywany "master". To jest po prostu nazwa ga³êzi, któr¹ git tworzy, kiedy zaczniesz puste repozytorium. Mo¿esz j¹ usun¹æ jeœli nie podoba Ci siê nazwa.
+Jeœli tworzysz swoje repozytorium przez klonowanie czyjegoœ repozytorium, zdalna ga³¹Ÿ "master" jest kopiowana na lokaln¹ ga³¹Ÿ nazwan¹ "origin". Mo¿esz mieæ swoj¹ w³asn¹ ga³¹Ÿ "master", która nie jest przywi¹zana do zdalnego repozytorium.
+
+c) Istnieje zawsze aktualna g³owica, zwana HEAD. (Aktualnie jest to link symboliczny, .git/HEAD, do pliku takiego jak refs/heads/master.) Git wymaga aby to zawsze wskazywa³o do katalogu refs/heads. HEAD zwyk³ byæ Uniksowym symlinkiem, i nadal mo¿e byæ tak postrzegany, ale aby obs³ugiwaæ systemy firmy Microsoft, to jest teraz tym co jest nazywane "symboliczna referencja" lub symref i jest prostym plikiem zawieraj¹cym "ref: refs/heads/master". Git traktuje to tak jak symlink. Istnieje pomocnik git-update-ref, który je zapisuje. Podczas gdy HEAD musi wskazywaæ na refs/heads, legalnym jest wskazywanie na nieistniej¹cy plik. To w³aœnie siê dzieje przed pierwszym zatwierdzeniem w ca³kowicie nowym repozytorium. Kiedy wykonujesz "git commit", nowy obiekt zatwierdzenia jest tworzony ze starym HEAD jako przodkiem, a nowe zatwierdzenie jest zapisywane do aktualnej g³owicy (wskazywanej przez HEAD).
+
+d) Prze³¹czenie na inn¹ g³owicê: 
+     git checkout [-f|-m] <gal¹Ÿ>
+   Cofniêcie zmiany dla ma³ej liczby plików: 
+     git checkout [<wersja>] [--] <œcie¿ki>
+   Stworzenie ga³êzi: 
+     git checkout [-f|-m] -b <ga³¹Ÿ> [wersja] 
+    jest to odpowiednik: 
+     git branch <ga³¹Ÿ> [<wersja>]
+     git checkout [-f|-m] <ga³¹Ÿ>
+   Kasowanie ga³êzi:
+     git branch -d <g³owica>
+   Nadpisanie aktualnej g³owicy:
+    Istniej¹ trzy poziomy resetu:
+     git reset --soft <g³owica>
+     
+     git reset [<g³owica>]
+     git reset --mixed [<g³owica>]
+     
+     git reset --hard [<g³owica>]
