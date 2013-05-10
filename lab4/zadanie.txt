@@ -1,0 +1,28 @@
+Komendy linii poleceñ:
+1. help - wyœwietlenie informacji o poleceniach,
+2. dir - wyœwietlanie zawartoœci danego katalogu,
+3. mkdir- tworzenie katalogu o nazwie 'katalog'
+       mkdir katalog
+4. echo - tworzenie pliku o nazwie 'plik.txt'
+       echo tekst w pliku >>C:\plik.txt
+5. type - wyœwietlanie zawartoœci pliku o nazwie 'plik.txt'
+       type plik.txt
+6. cd .. - przejœcie do katalogu nadrzêdnego,
+7. cd œcie¿ka - przejœcie do katalogu 'lab4'
+       cd C:\Users\student\Documents\GitHub\mkasprzyk\lab4
+8. ren - zmiana nazwy pliku 'plik.txt' na 'inny_plik.txt'
+       ren C:\xxx\plik.txt inny_plik.txt
+       
+Komendy git:
+1. git log - podgl¹d wszystkich zatwierdzonych zmian
+2. git diff - podgl¹d wprowadzonych w repozytorium zmian
+3. git diff --staged - podgl¹d wprowadzonych zmian plików które s¹ juz w przechowalni
+4. git status - podgl¹d zmian wprowadzonych w danym pliku
+5. git rm - usuwanie plików z repozytorium
+6. git add - dodawanie plików do przechowalni
+7. git reset HEAD --plik.txt - usuwanie plików przechowalni
+8. przenoszenie plików znajduj¹cych siê w przechowalni do innej ga³êzi:
+   git stash
+   git checkout nazwa ga³êzi
+   git stash apply     
+9. git branch -d "nazwa ga³êzi" - usuwanie ga³êzi

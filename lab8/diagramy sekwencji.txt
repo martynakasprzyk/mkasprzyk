@@ -1,0 +1,20 @@
+Diagram sekwencji
+Diagram przedstawia obiekty (instancje klas), stanowi¹ce sk³adowe jakiegoœ systemu oraz komunikaty wymieniane pomiêdzy nimi w celu realizacji danego zadania. Diagram mo¿e, ale nie musi, zawieraæ równie¿ aktorów oraz opisywaæ ich interakcjê z systemem.
+Elementy graficzne diagramu sekwencji to:
+  -aktor,
+  -obiekt,
+  -komunikat.
+Diagram sekwencji ma dwa wymiary:
+-Wymiar pionowy stanowi oœ czasu - komunikaty po³o¿one ni¿ej realizowane s¹ póŸniej,
+-Wymiar poziomy przedstawia role obiektów pomiêdzy, którymi trwa okreœlona komunikacja.
+W diagramach sekwencji wa¿na jest chronologia zdarzeñ.
+
+Aktor
+W diagramie sekwencji jest reprezentacj¹ zewnêtrznego u¿ytkownika (lub ich grupy), którzy oddzia³uj¹ na system. Aktor, podobnie jak obikety, ma oœ czasu. Je¿eli aktor jest Ÿród³em interakcji (a tak najczêœciej jest) to usytuowany jest w brzegowej (skrajnej lewej lub prawej) czêœci systemu. Dla aktora ustawiæ mo¿na parametry:
+  -nazwa,
+  -kod,
+  -komenatrz.
+Obiekt
+Jest instancj¹ klasy i tak jak aktor jest po³¹czony z osi¹ czasu. Je¿eli obiekt jest tworzony b¹dŸ niszczony, jest to zaznaczone na osi czasu. Parametry obiektów s¹ takie jak dla aktora (nazwa, kod, komenatrz), dodatkowo ustawiæ mo¿emy pole Classifier, które okreœla nazwê klasy, której instancj¹ jest obiekt. Je¿eli jeszcze nie istnieje dana klasa, mo¿emy j¹ stworzyæ na podstawie obiektu klikaj¹c "Create Class". Mo¿liwe jest przeci¹ganie symbolu klasy z drzewa obiektów do przestrzeni roboczej, wtedy automatycznie tworzona jest istancja klasy.
+Komunikaty
+Posiadaj¹ nadawcê, odbiorcê i akcjê, czyli treœæ informacji, która pojawi³a siê nad symbolem strza³ki. Tworz¹c komunikat okreœliæ mo¿na te¿ tzw. aktywacjê (activation), która reprezentuje czas wykonywania czynnoœci przez obiekt. Aktywacja nie posiada w³asnej listy w³aœciwoœci, jedynie graficzn¹ reprezentacjê w postaci prostok¹ta. Mo¿liwe jest tworzenie komunikatów pomiêdzy obiektami, aktorami, a nawet tworzenie komunikatów rekurencyjnych, tj. takich gdzie nadawca i odbiorca to ten sam obiekt/aktor.
